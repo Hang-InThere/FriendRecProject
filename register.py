@@ -7,7 +7,7 @@ import model
 import world
 
 
-if world.dataset in ['lastfm', 'ciao', 'epinions', 'douban', 'gowalla']:
+if world.dataset in ['ciao', 'epinions']:
     if world.model_name in ['FriendRec']:
         dataset = Dataset1.SocialDataset(world.dataset)
 
