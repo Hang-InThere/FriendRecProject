@@ -146,14 +146,6 @@ def NDCGatK_r(test_data, r, k):
     return np.sum(ndcg)
 
 
-def AUC(all_item_scores, dataset, test_data):
-    r_all = np.zeros((dataset.m_items,))
-    r_all[test_data] = 1
-    r = r_all[all_item_scores >= 0]
-    test_item_scores = all_item_scores[all_item_scores >= 0]
-    return roc_auc_score(r, test_item_scores)
-
-
 def getLabel(test_data, pred_data):
     r = []
     for i in range(len(test_data)):
