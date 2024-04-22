@@ -50,13 +50,7 @@ try:
                 best_ndcg_1,best_ndcg_2 = results['ndcg'][0],results['ndcg'][1]
                 best_pre_1,best_pre_2 = results['precision'][0],results['precision'][1]
                 low_count = 0
-            """
-            if results_cold['ndcg'][0] > best_ndcg_cold:
-                best_recall_cold = results_cold['recall'][0]
-                best_ndcg_cold = results_cold['ndcg'][0]
-                best_pre_cold = results_cold['precision'][0]
-                low_count_cold = 0
-            """
+
 
         loss = Procedure.BPR_train_original(dataset, Recmodel, bpr, epoch)
         print(f'[saved][BPR aver loss{loss:.3e}]')

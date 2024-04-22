@@ -75,14 +75,10 @@ class FriendRec(LightGCN):
         self.w_r2 = nn.Linear(self.latent_dim, self.latent_dim)
         self.Graph_Comb = Graph_Comb(self.latent_dim)
 
-        self.i = 0
-
 
 
 
     def computer(self):
-        self.i = self.i+1
-        #print(f'第{self.i}次调用computer')
         users_emb = self.embedding_user.weight
         items_emb = self.embedding_item.weight
         rating_emb = self.embedding_rating.weight
